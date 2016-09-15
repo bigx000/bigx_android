@@ -4,13 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.bigx.app.MainActivity">
+    tools:context="com.bigx.app.ConversationListActivity">
 
-    <ListView
-        android:id="@+id/user_list"
+    <fragment
+        android:id="@+id/conversationlist"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        
-    </ListView>
-    
+        android:layout_height="match_parent"
+        android:name="io.rong.imkit.fragment.ConversationListFragment"/>
+
 </LinearLayout>
