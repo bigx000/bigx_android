@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">XTalk</string>
+
+    <string name="menu_test">测试</string>
 </resources>
