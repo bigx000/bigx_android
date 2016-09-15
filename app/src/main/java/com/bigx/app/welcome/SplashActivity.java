@@ -42,8 +42,7 @@ public class SplashActivity extends Activity {
 
     private void init() {
         isLogin = SharedUtil.isLogin(this);
-        //int go = isLogin ? GO_HOME : GO_LOGIN;
-        int go = GO_LOGIN;
+        int go = isLogin ? GO_HOME : GO_LOGIN;
         mHandler.sendEmptyMessageDelayed(go, SPLASH_DELAY_MILLS);
     }
 
