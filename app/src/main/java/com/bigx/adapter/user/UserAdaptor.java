@@ -1,4 +1,4 @@
-package com.bigx.adapter;
+package com.bigx.adapter.user;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bigx.adapter.AbstractListAdapter;
 import com.bigx.app.R;
 import com.bigx.beans.UserBean;
 import com.bigx.tools.AsyncImageTool;

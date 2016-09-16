@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.bigx.app.ConversationListActivity">
+    
+    <include layout="@layout/layout_actionbar"/>
 
     <fragment
         android:id="@+id/conversationlist"

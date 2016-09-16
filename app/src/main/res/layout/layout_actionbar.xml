@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/actionbar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#0195FF">
+        
+        <RelativeLayout
+            android:id="@+id/actionbar_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            
+            <ImageView
+                android:id="@+id/actionbar_img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/bigx_title_back"/>
+            
+            <ImageView
+                android:id="@+id/actionbar_img_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/actionbar_img_back"
+                android:background="@drawable/bigx_bar_logo"/>
+            
+            <TextView
+                android:id="@+id/actionbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/actionbar_img_logo"
+                android:textColor="#E4E4E4"/>
+            
+        </RelativeLayout>
+        
+        <TextView
+            android:id="@+id/actionbar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:textColor="#E4E4E4"/>
+        
+    </RelativeLayout>
+    
+</merge>

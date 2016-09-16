@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.concurrent.CountDownLatch;
 
 /**
  * Created by zhaoshuai on 16/9/15.
@@ -17,6 +16,8 @@ public class UserTool {
     public static final String DEFAULT_PORTRAIT_URI = "http://img.hb.aicdn.com/65f6b7d99b547f094caf3ad5ce1f3dd25f1068122f8e3-CD0JS9_fw658";
     
     private static final Map<String, UserBean> USER_MAP = new HashMap<>();
+    
+    private static final Map<String, UserBean> USER_LIST = new HashMap<>();
     
     static {
         initUsers();
@@ -30,6 +31,7 @@ public class UserTool {
         userBean.password = "123456";
         userBean.portraitUri = DEFAULT_PORTRAIT_URI;
         userBean.token = "opG4CTet50zveRbKPcshkCv8NjHf7SxgxocJfkOj7pNpS4/A5km7F1TEb30etFgXJHHtweE3M1w=";
+        USER_LIST.put(Long.toString(userBean.userId), userBean);
         USER_MAP.put(userBean.account, userBean);
 
         userBean = new UserBean();
@@ -39,6 +41,7 @@ public class UserTool {
         userBean.password = "123456";
         userBean.portraitUri = DEFAULT_PORTRAIT_URI;
         userBean.token = "ZGBFQMTmQP8BOc8BG8loBCV5npCppRYRIIXtXeQMr0V3Fh+z+bDU2CXnYWT87De/izK1NL78ISNf+rM/dKNEHA==";
+        USER_LIST.put(Long.toString(userBean.userId), userBean);
         USER_MAP.put(userBean.account, userBean);
     }
     
@@ -51,6 +54,10 @@ public class UserTool {
             return null;
         }
         return userBean;
+    }
+    
+    public static UserBean getUserById(String userId) {
+        return USER_LIST.get(userId);
     }
     
     public static List<UserBean> getUsers(String account) {

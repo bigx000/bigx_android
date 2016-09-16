@@ -93,6 +93,41 @@
                     android:scheme="rong"/>
             </intent-filter>
         </activity>
+        <receiver android:name=".receiver.NotificationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED"/>
+                <action android:name="io.rong.push.intent.MI_MESSAGE_ARRIVED"/>
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED"/>
+                <action android:name="io.rong.push.intent.MI_MESSAGE_CLICKED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="io.rong.push.core.PushRegistrationService"
+            android:exported="false">
+        </service>
+        <service android:name="io.rong.push.core.MessageHandleService"
+            android:exported="true">
+        </service>
+        <service android:name="io.rong.push.PushService"
+            android:exported="false"
+            android:process="com.bigx.push"></service>
+        <receiver android:name="io.rong.push.PushReceiver"
+            android:process="com.bigx.push">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.action.HEART_BEAT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

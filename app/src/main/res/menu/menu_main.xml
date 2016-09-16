@@ -2,13 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/menu_conversation"
-        android:orderInCategory="1"
-        android:title="@string/menu_conversation"/>
-
-    <item
         android:id="@+id/menu_conversation_list"
         android:orderInCategory="1"
         android:title="@string/menu_conversation_list"/>
+
+    <item
+        android:id="@+id/menu_sub_conversation_list"
+        android:orderInCategory="1"
+        android:title="@string/menu_sub_conversation_list"/>
 
 </menu>
